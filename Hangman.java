@@ -76,11 +76,7 @@ public class Hangman {
         char[] wordCharArray = randomWord.toCharArray();
         char[] word = new char[wordCharArray.length];
 
-        System.out.print("Word:\t");
-        for (int i = 0; i < word.length; i++) {
-            word[i] = '_';
-            System.out.print(word[i] + " ");
-        }
+        printPlaceholders(word);
 
 
 
@@ -96,6 +92,15 @@ public class Hangman {
     // returns a random word from the list of random words
     public static String getRandomWord(String[] wordList) {
         return wordList[(int)(Math.random() * 65)];
+    }
+
+    // prints the placeholders for the word
+    public static void printPlaceholders(char[] word) {
+        System.out.print("Word:\t");
+        for (int i = 0; i < word.length; i++) {
+            word[i] = '_';
+            System.out.print(word[i] + " ");
+        }
     }
 
 
